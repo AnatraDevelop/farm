@@ -1300,6 +1300,11 @@
   }
 
   function doLogin() {
+    if (typeof google === 'undefined' || !google.script || !google.script.run) {
+      document.getElementById('loginError').innerText =
+        'Aplikasi ini hanya bisa dijalankan lewat URL Web App Google Apps Script (.../exec), bukan lewat GitHub Pages.';
+      return;
+    }
     const u = document.getElementById('username').value;
     const p = document.getElementById('password').value;
     document.getElementById('loginError').innerText = 'Memverifikasi...';
