@@ -1,0 +1,6 @@
+# Kredensial & konfigurasi lokal — JANGAN pernah di-commit
+.clasp.json
+.clasprc.json
+
+node_modules/
+.DS_Store
